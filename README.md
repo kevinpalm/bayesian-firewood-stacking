@@ -1,7 +1,7 @@
 # Bayesian Firewood Stacking
 Final project for Fall 2020 ISYE 6420 Georgia Tech Class
 
-## Intro
+## Introduction
 My new woodstove advertises an overall efficiency of 77% with a 10 hour burn time. Being a poor planner, I had this woodstove installed late this fall and I only have four rows of firewood stacked currently. (The purchase was a little bit of an impulse buy after a power outage disabled my home's heating for a day).
 
 My four rows of firewood each measure about 6 ft depth, 4 ft height, and 1.5 ft width. This makes each row of firewood equal to about 0.281 cords. (In the US, a cord of firewood is typically 4x8x4 ft.)
@@ -21,3 +21,5 @@ My home is quite well insulated and not that big, and our winters aren't that in
 Properly seasoned firewood has a moisture content between 15 and 20 percent. Given that I was late to collect firewood, I'm expecting that most of my woodpile won't be ready to burn this season, except for the standing dead trees that had already dried before I harvested them.
 
 I've gone ahead and recorded observations for species and moisture content of all the firewood peices I can access in my wood pile (using a moisture meter). However, my woodshed is partially walled, and I can only access one side of each row at this point. I'd like to use this data to estimate how many days worth of usable firewood I have.
+
+## Exploratory Data Analysis
