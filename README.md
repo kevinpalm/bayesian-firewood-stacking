@@ -18,8 +18,30 @@ Based on information from [this website](http://pages.sssnet.com/go2erie/Firewoo
 
 My home is quite well insulated and not that big, and our winters aren't that intense, so with the help of [this website](https://www.calculator.net/btu-calculator.html) I estimate that I'll need about 250k BTUs per day when using my woodstove (again, about 10 hours per day of actual burning time).
 
-Properly seasoned firewood has a moisture content between 15 and 20 percent. Given that I was late to collect firewood, I'm expecting that most of my woodpile won't be ready to burn this season, except for the standing dead trees that had already dried before I harvested them.
+A rule of thumb is that properly seasoned firewood has a moisture content between 15 and 20 percent. From experience, though, alder wood burns nicely up to about 23 percent since it's an especially soft wood. Given that I was late to collect firewood, I'm expecting that most of my woodpile won't be ready to burn this season, except for the standing dead trees that had already dried before I harvested them.
 
-I've gone ahead and recorded observations for species and moisture content of all the firewood peices I can access in my wood pile (using a moisture meter). However, my woodshed is partially walled, and I can only access one side of each row at this point. I'd like to use this data to estimate how many days worth of usable firewood I have.
+I've gone ahead and recorded observations for species and moisture content of all the firewood peices I can access in my wood pile (using a moisture meter). However, my woodshed is partially walled, and I can only access one side of each row at this point. I'd like to use this data to estimate how many days worth of seasoned firewood I have.
 
 ## Exploratory Data Analysis
+
+I have 61 total measurements across four rows of firewood.
+
+| Row | Samples |
+|-----|---------|
+| 1   | 14      |
+| 2   | 15      |
+| 3   | 15      |
+| 4   | 17      |
+
+While cutting firewood, I focused more on standing dead trees later in the process, so it makes sense that later rows of firewood have lower moisture content.
+
+![boxplot of percent moisture content by firewood row](moisture_by_row.png "Figure 1")
+
+There was only one pine tree in the mix, and I think I had worked through it before finishing stacking the second row.
+
+![barchart of species samples by firewood row](species_by_row.png "Figure 2")
+
+Finally, each species has somewhat different distributions of moisture content.
+
+![boxplot of percent moisture content by species](moisture_by_species.png "Figure 3")
+
