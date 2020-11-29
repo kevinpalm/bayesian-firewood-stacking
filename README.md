@@ -1,5 +1,6 @@
 # Bayesian Firewood Stacking
 Final project for Fall 2020 ISYE 6420 Georgia Tech Class
+[https://github.com/kevinpalm/bayesian-firewood-stacking](https://github.com/kevinpalm/bayesian-firewood-stacking)
 
 ## Introduction
 My new woodstove advertises an overall efficiency of 77% with a 10 hour burn time. Being a poor planner, I had this woodstove installed late this fall and I only have four rows of firewood stacked currently. (The purchase was a little bit of an impulse buy after a power outage disabled my home's heating for a day).
@@ -70,4 +71,16 @@ After fitting the model to the data, my original question for how many days of f
 
 ### Implementation
 
-Model implementation was completed using pystan and is available here: 
+Model implementation was completed using pystan and code is available here: [https://github.com/kevinpalm/bayesian-firewood-stacking/blob/main/model.ipynb](https://github.com/kevinpalm/bayesian-firewood-stacking/blob/main/model.ipynb)
+
+## Conclusions
+
+Based on this model, I should expect my firewood stack is comprised of:
+
+* 47% alder
+* 28% birch
+* 25% pine
+
+With the requirements I set for how seasoned the wood needs to be before burning, I estimate for the 95% credible set that between 34% and 54% of the total pile is burnable. Given the mix of wood species ready to burn, this is equivalent to between 23.6 and 37.6 days of fuel.
+
+Sounds like I'll need to aquire a bit more dry wood before I'm ready for winter!
