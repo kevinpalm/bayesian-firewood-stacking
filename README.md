@@ -37,15 +37,15 @@ I have 61 total measurements across four rows of firewood.
 
 While cutting firewood, I focused more on standing dead trees later in the process, so it makes sense that later rows of firewood have lower moisture content.
 
-![boxplot of percent moisture content by firewood row](moisture_by_row.png "Figure 1")
+![boxplot of percent moisture content by firewood row](imgs/moisture_by_row.png "Figure 1")
 
 There was only one pine tree in the mix, and I think I had worked through it before finishing stacking the second row.
 
-![barchart of species samples by firewood row](species_by_row.png "Figure 2")
+![barchart of species samples by firewood row](imgs/species_by_row.png "Figure 2")
 
 Finally, each species has somewhat different distributions of moisture content.
 
-![boxplot of percent moisture content by species](moisture_by_species.png "Figure 3")
+![boxplot of percent moisture content by species](imgs/moisture_by_species.png "Figure 3")
 
 ## Modeling
 
@@ -55,18 +55,18 @@ My data is very much a convenience sample - I just measured the logs I could rea
 
 | Row | Percent Alder Prior | Percent Birch Prior | Percent Pine Prior |
 |-----|---------------------|---------------------|--------------------|
-| 1   | beta(7, 3)          | beta(2, 8)          | beta(1, 9)         |
+| 1   | beta(5, 5)          | beta(2, 8)          | beta(3, 7)         |
 | 2   | beta(7, 3)          | beta(2, 8)          | beta(1, 9)         |
 | 3   | beta(15, 5)         | beta(4, 16)         | beta(1, 19)        |
 | 4   | beta(15, 5)         | beta(4, 16)         | beta(1, 19)        |
 
-I don't really have prior beliefs about the percent moisture content of my firewood, so I'll use noninformative priors and lean on my sensor data. I'll also transform my data just a little so that I can more directly model what percent of each species per row is already seasoned enough to burn. I'll be modeling for each row for each species as binomial distributions, what percent of wood is less than or equal to 20% moisture for birch and pine, and less than or equal to 23% moisture for alder.
+I don't really have prior beliefs about the percent moisture content of my firewood, so I'll use noninformative priors. I'll also transform my data just a little so that I can more directly model what percent of each species per row is already seasoned enough to burn. I'll be modeling each row per each species as separate binomial distributions. Each binomial distribution will measure what percent of wood is less than or equal to 20% moisture for birch and pine, and less than or equal to 23% moisture for alder - at which point the firewood is considered seasoned and ready enough to burn.
 
 The model framework will end up looking something like this:
 
-![proposed model framework flowchart](firewood_model_flow.png "Figure 4")
+![proposed model framework flowchart](imgs/firewood_model_flow.png "Figure 4")
 
-After fitting the model to the data, my original question for how many days of fuel are contained the firewood can be calculated based on the probability of each tree species and the probabilities that the wood is seasoned enough to burn.
+After fitting the model to the data, my original question for how many days of fuel are contained in the firewood can be calculated based on the probability of each tree species and the probabilities that the wood is seasoned enough to burn.
 
 ### Implementation
 
